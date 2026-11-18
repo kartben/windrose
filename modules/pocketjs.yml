@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: pocketjs
+title: PocketJS
+summary: >-
+  TypeScript and JSX display UIs, run by a QuickJS guest and drawn by a Rust core.
+description: |
+  [PocketJS](https://pocketjs.pocket.nexus) runs applications written in TypeScript with Solid, Vue
+  Vapor or Octane components. A QuickJS guest runs the application, and a Rust core performs
+  flexbox layout and draws every pixel, with no DOM, CSS engine or WebView. The `pocket` CLI
+  compiles an application, its styles and its fonts into a `.pocket` package that the firmware
+  embeds.
+
+  The Zephyr module links the prebuilt PocketJS runtime archive and adds allocation and clock
+  hooks, a display adapter (RGB565 and ARGB8888) and an input adapter for keys and touch. The
+  application registers the runtime, the QuickJS guest and these drivers, and brings the QuickJS
+  engine; see the [module README](https://github.com/pocket-nexus/pocketjs/tree/main/platforms/zephyr).
+  Building requires the `pocket` CLI, which runs on Bun, to export the host contract and to fetch
+  the SDK archive for the target.
+
+  PocketJS is licensed under the MIT license. The Pocket3D directories of the repository have
+  their own license and are not part of the Zephyr module.
+category: graphics
+keywords: [gui, javascript, tailwind]
+license: MIT
+maintainers:
+  - github: pocket-nexus
+links:
+  repository: https://github.com/pocket-nexus/pocketjs
+  documentation: https://pocketjs.pocket.nexus/docs/overview/
+  homepage: https://pocketjs.pocket.nexus
+west:
+  revision: v0.16.0
+  path: modules/lib/pocketjs
