@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: spotflow
+title: Spotflow Device SDK
+summary: >-
+  Logs, metrics, crash dumps and OTA updates for Zephyr devices, through the Spotflow observability platform.
+description: |
+  The [Spotflow Device SDK](https://github.com/spotflow-io/device-sdk) connects Zephyr devices to
+  [Spotflow](https://spotflow.io/), an observability platform for embedded devices that collects
+  logs, metrics and crash dumps from devices in the field. The platform provides dashboards,
+  alerts, crash analysis, vulnerability detection and over-the-air (OTA) firmware updates.
+
+  The SDK builds on Zephyr's logging and core dump subsystems, so messages from standard logging
+  macros such as `LOG_INF()` reach Spotflow unchanged. It sends telemetry over MQTT or BLE. OTA
+  updates use MCUboot and can also update external MCUs connected to the device. Enable it with
+  `CONFIG_SPOTFLOW=y`, a device ID and an ingest key from the Spotflow web application.
+
+  The SDK is licensed under the Business Source License 1.1, with an additional use grant limited
+  to interaction with the Spotflow platform.
+category: device-mgmt
+license: BUSL-1.1
+maintainers:
+  - github: spotflow-io
+links:
+  repository: https://github.com/spotflow-io/device-sdk
+  documentation: https://docs.spotflow.io/quickstart/zephyr
+  homepage: https://spotflow.io/
+  examples: https://github.com/spotflow-io/device-sdk/tree/main/zephyr/samples
+  license: https://github.com/spotflow-io/device-sdk/blob/main/LICENSE.MD
+west:
+  revision: v1.0.0
+  path: modules/lib/spotflow
