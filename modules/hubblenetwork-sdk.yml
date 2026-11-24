@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: hubblenetwork-sdk
+title: Hubble Device SDK
+summary: >-
+  Global connectivity over Bluetooth LE: Hubble's terrestrial gateways and satellites relay device data to the cloud.
+description: |
+  The [Hubble Device SDK](https://github.com/HubbleNetwork/hubble-device-sdk) connects a device
+  to [Hubble](https://hubble.com) through its Bluetooth LE radio, with no cellular modem, SIM
+  card or dedicated gateway. It encodes application data into BLE advertisements that gateways of
+  Hubble's Terrestrial Network pick up and deliver, with the device's location, to a backend
+  through Hubble's cloud API. The SDK also supports Hubble's Satellite Network.
+
+  `CONFIG_HUBBLE_BLE_NETWORK=y` enables the terrestrial network. `CONFIG_HUBBLE_SAT_NETWORK=y`
+  enables the satellite network on supported Nordic boards, which links prebuilt radio libraries:
+  fetch them with `west blobs fetch hubblenetwork-sdk`.
+category: communication
+license: Apache-2.0
+maintainers:
+  - github: HubbleNetwork
+links:
+  repository: https://github.com/HubbleNetwork/hubble-device-sdk
+  documentation: https://hubblenetwork.github.io/hubble-device-sdk/main/quickstart/zephyr/index.html
+  homepage: https://hubble.com
+  examples: https://github.com/HubbleNetwork/hubble-device-sdk/tree/main/samples/zephyr
+west:
+  revision: v3.1.0
+  path: modules/lib/hubblenetwork-sdk
