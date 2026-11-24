@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: s2opc
+title: S2OPC
+summary: >-
+  OPC UA client, server and PubSub toolkit in C, designed for safe and secure embedded devices.
+description: |
+  [S2OPC](https://www.s2opc.com) is an OPC UA toolkit from [Systerel](https://www.systerel.fr/).
+  It provides client, server and PubSub implementations in C, with an optimized footprint and
+  real-time support. It targets IEC 61508 and EN 50128 integration, and its demo server is
+  certified by the OPC Foundation. Cryptography uses Mbed TLS.
+
+  Enable the module with `CONFIG_S2OPC=y`. The repository includes the `cli_client` and
+  `cli_pubsub_server` embedded samples. The [Zephyr build
+  guide](https://gitlab.com/systerel/S2OPC/-/wikis/compilation/Zephyr-compilation) lists the
+  supported Zephyr versions.
+category: industrial
+license: Apache-2.0
+maintainers:
+  - github: systerel
+links:
+  repository: https://gitlab.com/systerel/S2OPC
+  documentation: https://gitlab.com/systerel/S2OPC/-/wikis/compilation/Zephyr-compilation
+  homepage: https://www.s2opc.com
+west:
+  revision: S2OPC_Toolkit_1.7.3
+  path: modules/lib/s2opc
