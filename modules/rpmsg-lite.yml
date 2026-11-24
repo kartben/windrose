@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: rpmsg-lite
+title: RPMsg-Lite
+summary: >-
+  NXP's lightweight RPMsg implementation for messaging between the cores of a multicore MCU.
+description: |
+  [RPMsg-Lite](https://github.com/nxp-mcuxpresso/rpmsg-lite) implements Remote Processor
+  Messaging (RPMsg), the standard binary interface between the cores of a heterogeneous multicore
+  system. Compared to the RPMsg implementation of [OpenAMP](https://github.com/OpenAMP/open-amp),
+  which Zephyr ships as a module, it has a smaller footprint, a simpler API and a static API for
+  systems without dynamic memory allocation.
+
+  Enable the module with `CONFIG_RPMSGLITE=y`. It includes a ping-pong sample built with
+  sysbuild. The Zephyr port supports NXP LPC5411x, LPC55S69, i.MX RT1170 and i.MX RT1160; other
+  platforms need a platform porting file.
+category: communication
+license: BSD-3-Clause
+maintainers:
+  - github: nxp-mcuxpresso
+links:
+  repository: https://github.com/nxp-mcuxpresso/rpmsg-lite
+  documentation: https://nxp-mcuxpresso.github.io/rpmsg-lite/
+  examples: https://github.com/nxp-mcuxpresso/rpmsg-lite/tree/main/zephyr/samples
+west:
+  revision: v5.5.0
+  path: modules/lib/rpmsg-lite
