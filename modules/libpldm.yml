@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: libpldm
+title: libpldm
+summary: >-
+  OpenBMC's C library to encode and decode PLDM platform management messages.
+description: |
+  [libpldm](https://github.com/openbmc/libpldm) encodes and decodes Platform Level Data Model
+  (PLDM) messages. PLDM is a DMTF protocol that gives efficient access to low-level platform
+  inventory, monitoring, control, event and data transfer functions. The library is developed by
+  the [OpenBMC](https://github.com/openbmc) project but has no OpenBMC dependency: it is written
+  in C, endian-safe and keeps dynamic allocation to a minimum.
+
+  Enable the library with `CONFIG_PLDM=y`, then include its headers, for example
+  `#include <libpldm/base.h>`.
+category: communication
+license: Apache-2.0
+maintainers:
+  - github: openbmc
+links:
+  repository: https://github.com/openbmc/libpldm
+west:
+  revision: v0.18.0
+  path: modules/lib/libpldm
