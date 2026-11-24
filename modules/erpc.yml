@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: Copyright The Zephyr Project Contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: erpc
+title: eRPC
+summary: >-
+  Remote procedure calls between chips and cores, with C/C++ or Python shims generated from IDL files.
+description: |
+  [eRPC](https://github.com/EmbeddedRPC/erpc) (Embedded RPC) is a remote procedure call system for
+  multichip embedded systems and heterogeneous multicore SoCs. It targets tightly coupled systems
+  rather than networked services: remote functions are plain C, and the runtime takes less than
+  5 kB of code. The `erpcgen` tool reads data types and interfaces from `.erpc` files and
+  generates the serialization and dispatch code in C/C++ or Python.
+
+  Enable the module with `CONFIG_ERPC=y`. It provides UART, TCP, mailbox (MBOX) and RPMsg-Lite
+  transports, with a matrix multiplication sample for each. The RPMsg-Lite transport also needs
+  the [RPMsg-Lite](https://github.com/nxp-mcuxpresso/rpmsg-lite) module.
+category: communication
+license: BSD-3-Clause
+maintainers:
+  - github: EmbeddedRPC
+links:
+  repository: https://github.com/EmbeddedRPC/erpc
+  documentation: https://github.com/EmbeddedRPC/erpc/wiki
+  examples: https://github.com/EmbeddedRPC/erpc/tree/main/examples/zephyr
+west:
+  revision: "1.14.0"
+  path: modules/lib/erpc
